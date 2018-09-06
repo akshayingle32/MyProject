@@ -1,6 +1,6 @@
 <?php
 
-echo "Akshay ";
+echo "Akshay";
 
 echo "data";
 
