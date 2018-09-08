@@ -18,6 +18,8 @@ class Book {
     }
 }
 
+echo "hii";
+
 class CaseReverseFacade {
     public static function reverseStringCase($stringIn) {
         $arrayFromString = ArrayStringFunctions::stringToArray($stringIn);
