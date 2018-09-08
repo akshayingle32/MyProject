@@ -1,5 +1,10 @@
 <?php
 
+
+
+
+
+
 class SimpleBook {
     private $author;
     private $title;
@@ -14,6 +19,12 @@ class SimpleBook {
         return $this->title;
     }
 }
+
+
+
+
+
+
 
 class BookAdapter {
     private $book;

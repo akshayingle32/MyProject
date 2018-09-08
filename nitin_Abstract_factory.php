@@ -8,6 +8,8 @@ abstract class AbstractBookFactory {
     abstract function makeMySQLBook();
 }
 
+
+
 class OReillyBookFactory extends AbstractBookFactory {
     private $context = "OReilly";
     function makePHPBook() {
