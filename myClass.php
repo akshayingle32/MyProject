@@ -77,6 +77,10 @@ class BookStarsOffCommand extends BookCommand {
   // the callCommand function demonstrates that a specified
   // function in BookCommandee can be executed with only 
   // an instance of BookCommand.
+
+
+
+  
   function callCommand(BookCommand $bookCommand_in) {
     $bookCommand_in->execute();
   }
