@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 abstract class AbstractBookTopic {
     abstract function getTopic();
@@ -9,15 +9,10 @@ abstract class AbstractBookTopic {
 class BookTopic extends AbstractBookTopic {
     private $topic;
     private $title;
-    function __construct($topic_in,$tile_in) {
+    function __construct($topic_in) {
       $this->topic = $topic_in;
-      $this->title = $tile_in;
+      $this->title = NULL;
     }
-
-
-
-
-    
     function getTopic() {
       return $this->topic;
     }
@@ -85,7 +80,7 @@ class BookSubSubTopic extends AbstractBookTopic {
   writeln("BEGIN TESTING CHAIN OF RESPONSIBILITY PATTERN");
   writeln("");
 
-  $bookTopic = new BookTopic("PHP 5","mysql");
+  $bookTopic = new BookTopic("PHP 5");
   writeln("bookTopic before title is set:");
   writeln("topic: " . $bookTopic->getTopic());
   writeln("title: " . $bookTopic->getTitle());
@@ -94,7 +89,9 @@ class BookSubSubTopic extends AbstractBookTopic {
   $bookTopic->setTitle("PHP 5 Recipes by Babin, Good, Kroman, and Stephens");
   writeln("bookTopic after title is set: ");
   writeln("topic: " . $bookTopic->getTopic());
-  writeln("title: " . $bookTopic->getTitle());
+  writeln("title: " .
+
+ $bookTopic->getTitle());
   writeln("");
  
   $bookSubTopic = new BookSubTopic("PHP 5 Patterns",$bookTopic);
@@ -109,7 +106,8 @@ class BookSubSubTopic extends AbstractBookTopic {
   writeln("title: ". $bookSubTopic->getTitle());
   writeln("");
  
-  $bookSubSubTopic = new BookSubSubTopic("PHP 5 Patterns for Cats",$bookSubTopic);
+  $bookSubSubTopic = new BookSubSubTopic("PHP 5 Patterns for Cats",
+    $bookSubTopic);
   writeln("bookSubSubTopic with no title set: ");
   writeln("topic: " . $bookSubSubTopic->getTopic());
   writeln("title: " . $bookSubSubTopic->getTitle());
