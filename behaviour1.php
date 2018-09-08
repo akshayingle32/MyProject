@@ -13,6 +13,11 @@ class BookTopic extends AbstractBookTopic {
       $this->topic = $topic_in;
       $this->title = $tile_in;
     }
+
+
+
+
+    
     function getTopic() {
       return $this->topic;
     }
