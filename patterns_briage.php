@@ -13,9 +13,6 @@ abstract class BridgeBook {
         $this->bbImp = new BridgeBookCapsImp();
       }
 
-
-
-      
     }    
     function showAuthor() {
       return $this->bbImp->showAuthor($this->bbAuthor);
