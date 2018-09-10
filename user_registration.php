@@ -115,15 +115,14 @@
                     }
 
                     // oninput for password
-
                     function myFunction1() {
                         var x = document.getElementById("password").value;
                         document.getElementById("passerror").innerHTML = "You wrote: " + x;
                     }
 
             </script>
-    </head>
-    <body>
+     </head>
+      <body>
 
         <h1><center>Registration Form:</center></h1>
             <div class="container">
