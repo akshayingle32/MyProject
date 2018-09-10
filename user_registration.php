@@ -217,9 +217,23 @@ function myFunction2(x) {
         <span  id="mobileerror" class="text-danger font-weight-bold" > </span>
 >>>>>>> 1291a316ab564c939d8fce157df20ceaf1d218d6
         </div>
+<<<<<<< HEAD
    
        
        
+=======
+
+         <div class="dropdown">
+         <label >*Course:</label>
+         <select>
+              <option value="volvo">BCS</option>
+              <option value="saab">Saab</option>
+              <option value="opel">Opel</option>
+              <option value="audi">Audi</option>
+              </select>
+        </div> 
+      <br><br>
+>>>>>>> e8d528970a823e338d41549f4573fc324cc454e8
         <input type="submit" class="btn btn-primary" value="Submit" onmouseover="bigImg(this)" onmouseout="normalImg(this)"  width="32" height="32">
         <span id="s1" ></span>
         </form>

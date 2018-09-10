@@ -8,7 +8,6 @@ session_start();
 
 include('dbcon.php');
 
-
 if(isset($_GET['email']))
 
 {
