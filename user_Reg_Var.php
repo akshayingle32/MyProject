@@ -1,3 +1,4 @@
+
 <?php
 $Name=$_POST['RegName'];
 $Email=$_POST['RegMail'];
@@ -27,6 +28,8 @@ else
  		}
 	
 }
+<<<<<<< HEAD
+=======
 
 
 
@@ -34,4 +37,5 @@ else
 
 
 
+>>>>>>> 1291a316ab564c939d8fce157df20ceaf1d218d6
 ?>

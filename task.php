@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-<?php
-?>
-=======
 <html>
-<head> </head>
-
-
+<head></head>
+<body>
+<select>
+</select>
+</body>
 </html>
->>>>>>> 063e77fa4be4ead96dc37cd51d2c0457d7a8ac1c

@@ -1,5 +1,50 @@
 
 
+<<<<<<< HEAD
+=======
+/*here we started the session*/
+
+session_start();
+
+
+include('dbcon.php');
+
+if(isset($_GET['email']))
+
+{
+    $email=$_GET['email'];
+    $password=$_GET['pass'];
+
+    $sql = "SELECT * FROM user_register WHERE email='".$email."' AND
+    password='".$password."'";
+
+    $res =mysql_query($sql) or die("error to find data");
+
+    $num_rows=mysql_num_rows($res);
+
+
+    if($num_rows==1)
+    
+    {
+        /*user is session name*/
+
+        $_SESSION['user'] = $email;
+        header('location:userprofile.php');
+            exit;
+
+    }
+    else
+    {
+
+
+    ?> <script> alert("invalid user name or password"); </script>
+
+<?php
+    }
+
+    }
+?>
+>>>>>>> 46155b4da169a57ea4cc4f191e33f96395cf47d2
 
 <html>
     <head>
