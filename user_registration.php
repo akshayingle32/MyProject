@@ -13,9 +13,9 @@
        
     }
    
-    </style>
+    </style>  <!--
 <script>
-   
+  
     function simplevalidation(){
    
     var name=document.getElementById('name').value;
@@ -144,31 +144,31 @@ function myFunction2(x) {
 
 </script>
 
-
+ -->
 </head>
 <body>
 
    
         <h1><center>Registration Form:</center></h1>
         <div class="container">
-    <form action="animation.html" onsubmit="return simplevalidation()" >
+    <form action="user_Reg_Var.php" method="POST" onsubmit="return simplevalidation()" >
        
         <div class="form-group">
         <label >*Name:</label>
-        <input type="text" class="form-control" id="name" placeholder="Enter name" onfocus="myFunction2(this)">
+        <input type="text" class="form-control" name="RegName" id="name" placeholder="Enter name" onfocus="myFunction2(this)" required>
         <span id="usererror" class="text-danger font-weight-bold" > </span>
         </div>
        
         <div class="form-group">
         <label >*Password:</label>
-        <input type="password" class="form-control" id="password" placeholder="Enter password" oninput="myFunction1()" onfocus="myFunction3(this)">
+        <input type="password" class="form-control" name="RegPass" id="password" placeholder="Enter password" oninput="myFunction1()" onfocus="myFunction3(this)">
         <span id="passerror" class="text-danger font-weight-bold" > </span>
         <h6>Password must be at least three characters including alphanumeric and Special Symbols.</h6>
         </div>
        
         <div class="form-group">
         <label >*Confirm Password:</label>
-        <input type="text" class="form-control" id="conpassword" placeholder="Confirm password" onfocus="myFunction4(this)" />
+        <input type="text" class="form-control" name="RegConfPass" id="conpassword" placeholder="Confirm password" onfocus="myFunction4(this)" />
         <span id="conpasserror" class="text-danger font-weight-bold" > </span>
         </div>   
        
@@ -178,19 +178,19 @@ function myFunction2(x) {
    
         <div class="form-group">
         <label >*email:</label>
-        <input type="text" class="form-control" id="email" placeholder="Enter email" onfocus="myFunction5(this)">
+        <input type="email" class="form-control" name="RegMail" id="email" placeholder="Enter email" onfocus="myFunction5(this)">
         <span id="emailerror" class="text-danger font-weight-bold" > </span>
         </div>
        
         <div class="form-group">
         <label >*Mobile:</label>
-        <input type="text" class="form-control" id="mobile" placeholder="Enter mobile" onfocus="myFunction6(this)">
+        <input type="text" class="form-control" name="RegNum" id="mobile" placeholder="Enter mobile" onfocus="myFunction6(this)">
         <span  id="mobileerror" class="text-danger font-weight-bold" > </span>
         </div>
        
         <div class="form-group">
         <label >*Course:</label>
-        <input type="text" class="form-control" id="mobile" placeholder="Enter mobile" onfocus="myFunction7(this)">
+        <input type="text" class="form-control" name="RegCourse" id="mobile" placeholder="Enter mobile" onfocus="myFunction7(this)">
         <span  id="mobileerror" class="text-danger font-weight-bold" > </span>
         </div>
 
@@ -208,7 +208,7 @@ function myFunction2(x) {
    
        
        
-        <input type="submit" name=""  class="btn btn-primary" value="Submit" onmouseover="bigImg(this)" onmouseout="normalImg(this)"  width="32" height="32">
+        <input type="submit" class="btn btn-primary" value="Submit" onmouseover="bigImg(this)" onmouseout="normalImg(this)"  width="32" height="32">
         <span id="s1" ></span>
         </form>
     </div>   
