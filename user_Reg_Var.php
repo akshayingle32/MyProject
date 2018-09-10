@@ -1,3 +1,4 @@
+
 <?php
 $Name=$_POST['RegName'];
 $Email=$_POST['RegMail'];
@@ -27,8 +28,4 @@ else
 // 		}
 	echo "inseted";
 }
-
-
-
-
 ?>

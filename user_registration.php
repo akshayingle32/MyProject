@@ -196,18 +196,14 @@ function myFunction2(x) {
 
          <div class="dropdown">
          <label >*Course:</label>
-             <button class="btn btn-primary dropdown-toggle" id="course" type="button" data-toggle="dropdown" onfocus="myFunction7(this)">Choose Course
-             <span class="caret"></span></button>
-             <ul class="dropdown-menu">
-                 <li><a href="#">Enginnering</a></li>
-                 <li><a href="#">MCA</a></li>
-                 <li><a href="#">BCA</a></li>
-                 <li><a href="#">BCS</a></li>
-            </ul>
+         <select>
+              <option value="volvo">BCS</option>
+              <option value="saab">Saab</option>
+              <option value="opel">Opel</option>
+              <option value="audi">Audi</option>
+              </select>
         </div> 
-   
-       
-       
+      <br><br>
         <input type="submit" class="btn btn-primary" value="Submit" onmouseover="bigImg(this)" onmouseout="normalImg(this)"  width="32" height="32">
         <span id="s1" ></span>
         </form>
