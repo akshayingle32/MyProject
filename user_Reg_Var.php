@@ -39,7 +39,7 @@ if($Name=="" || $Email=="" || $Mob=="" || $Password=="" || $ConfPassword=="" || 
 
 
 
-$servername = "localhost";
+$servername = "192.168.31.40";
 $username = "dms";
 $password = "dms";
 $dbname = "user";
