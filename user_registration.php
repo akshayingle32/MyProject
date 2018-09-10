@@ -145,13 +145,14 @@ function myFunction2(x) {
 </script>
 
  -->
+ 
 </head>
 <body>
 
    
-        <h1><center>Registration Form:</center></h1>
+        <h1><center>Registration Form:</center> </h1>
         <div class="container">
-    <form action="user_Reg_Var.php" method="POST" onsubmit="return simplevalidation()" >
+       <form action="user_Reg_Var.php" method="POST" onsubmit="return simplevalidation()" >
        
         <div class="form-group">
         <label >*Name:</label>
@@ -203,7 +204,7 @@ function myFunction2(x) {
               <option value="audi">Audi</option>
               </select>
         </div> 
-      <br><br>
+        <br><br>
         <input type="submit" class="btn btn-primary" value="Submit" onmouseover="bigImg(this)" onmouseout="normalImg(this)"  width="32" height="32">
         <span id="s1" ></span>
         </form>
