@@ -126,8 +126,10 @@
 
         <h1><center>Registration Form:</center></h1>
             <div class="container">
+
         <!-- <form action="user_registration.php" onsubmit="return simplevalidation()" > -->
         <!-- <form action="user_Reg_Var.php" method="POST" onsubmit="return simplevalidation()" > -->
+
         <form action="user_Reg_Var.php" method="POST" onsubmit="return simplevalidation()" >
        
             <div class="form-group">
@@ -173,11 +175,11 @@
            
             <br><br>
             <div>
-                <input type="submit" class="btn btn-primary" value="Submit" onmouseover="bigImg(this)" onmouseout="normalImg(this)"  width="32" height="32">
+                <input type="submit" class="btn btn-primary" value="Submit" >
                 <span id="s1" ></span>
                 </form>
             </div>   
-        </form> 
+        
     </body>
 
 </html>

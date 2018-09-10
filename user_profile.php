@@ -6,52 +6,51 @@
 	<?php
        session_start();
        include('db_config.php');
-         $user=$_SESSION['user'];
+        
+ if(!empty( $_SESSION['user']))
+  {
+       $user=$_SESSION['user'];
          
        $sql="select id from userregistration where id ='".$user."'";
         $query=mysql_query($sql);
          $userName=mysql_result($query,0,0);
-    if($user==$userName)
-    {
-    	echo "<a href='user_logout.php'>logout</a>";
-
-
-    	echo "<table class='table table-hover'>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>NAME OF STUDENT</th>
-        <th>MOBILE NUMBER</th>
-        <th>Email Addrees</th>
-         <th>Coures</th>
-      </tr>
-    </thead><tbody>";
-    $q1=mysql_query("select id, RegName, RegMob, RegEmail, RegCourse from userregistration where id='".$userName."'");
-    $numRows=mysql_num_rows($q1);
-		    for($i=0; $i<$numRows; $i++)
-		    {
-		    	echo "<tr>";
-		    	for($j=0; $j<=4; $j++)
-		    	{
-		      
-		        echo "<td>".$id=mysql_result($q1,$i,$j)."</td>";
-		       
-		      }
-
-		   
-
-
-           }
-            echo "</tbody>  </table>";
-    }       
+	    if($user==$userName)
+	    {
+	    	echo "<a href='user_logout.php'>logout</a>";
+	    	echo "<table class='table table-hover'>
+	    <thead>
+	      <tr>
+	        <th>ID</th>
+	        <th>NAME OF STUDENT</th>
+	        <th>MOBILE NUMBER</th>
+	        <th>Email Addrees</th>
+	         <th>Coures</th>
+		  </tr>
+		 </thead><tbody>";
+		    $q1=mysql_query("select id, RegName, RegMob, RegEmail, RegCourse from userregistration where id='".$userName."'");
+	   			 $numRows=mysql_num_rows($q1);
+			    for($i=0; $i<$numRows; $i++)
+			    {
+			    	echo "<tr>";
+			    	for($j=0; $j<=4; $j++)
+			    	{
+			      
+			        echo "<td>".$id=mysql_result($q1,$i,$j)."</td>";
+			       
+			         }
+	           }
+	            echo "</tbody>  </table>";
+	    }       
     else
     {
-    	//header('location:user_login.php');
-    	echo "login failed";
+    	header('location:user_login.php');
+    	//echo "login failed";
     }
-	?>
-	
-
-
+}
+else
+{
+	header('location:user_login.php');
+}
+?>
 
 </body></html>

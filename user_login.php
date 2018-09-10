@@ -24,8 +24,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
  
     </head><body><br>
+        <div class="container">
     <div class="b">
-      <a href="user_registration.php">   <input type="button"
+      <a href="register.php">   <input type="button"
 class="btn btn-primary" value="Sign up">  </a></div>
 
     
@@ -47,5 +48,6 @@ class="btn btn-primary" value="Sign up">  </a></div>
         <input type="submit"  class="btn btn-primary" value="Login">   <br><br>
           </form>
         </div>
+    </div>
     </body>
 </html>
