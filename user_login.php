@@ -1,6 +1,7 @@
-<?php
 
 
+<<<<<<< HEAD
+=======
 /*here we started the session*/
 
 session_start();
@@ -43,6 +44,7 @@ if(isset($_GET['email']))
 
     }
 ?>
+>>>>>>> 46155b4da169a57ea4cc4f191e33f96395cf47d2
 
 <html>
     <head>
@@ -64,16 +66,16 @@ if(isset($_GET['email']))
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
  
-    </head><br>
+    </head><body><br>
     <div class="b">
-      <a href="index.php">   <input type="button"
+      <a href="user_registration.php">   <input type="button"
 class="btn btn-primary" value="Sign up">  </a></div>
 
-    <body>
+    
  <div class="container">
     <h1 align="center" > Welcome to User Login  </h1><br><br>
             
-    <form action="login.php" method="get">
+    <form action="loginVarify.php" method="POST">
         <div class="form-group">
        
         <label>Email: </label>
