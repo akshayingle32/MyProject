@@ -6,7 +6,7 @@ $Mob=$_POST['RegNum'];
 $Password=$_POST['RegPass'];
 $ConfPassword=$_POST['RegConfPass'];
 
-$Course=$_POST['RegCourse'];
+$Course=$_POST['RegCouse'];
 include('db_Config.php');
 
 if($Name=="" || $Email=="" || $Mob=="" || $Password=="" || $ConfPassword=="" || $Course=="")
@@ -20,22 +20,12 @@ else
  $query=mysql_query("insert into userregistration values('NULL','$Name','$Mob','$Course','$Email','$Password','$ConfPassword')");
  		if( $query )
 		{
- 			echo " inserted";
- 		}
+			header('location:user_login.php');
+		}
  		else
 		{
- 			echo "something is wrong"; 
+ 			die("something is wrong:".mysql_error()); 
  		}
 	
 }
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
->>>>>>> 1291a316ab564c939d8fce157df20ceaf1d218d6
 ?>
