@@ -1,7 +1,5 @@
 
-
-<<<<<<< HEAD
-=======
+<?php
 /*here we started the session*/
 
 session_start();
@@ -44,7 +42,7 @@ if(isset($_GET['email']))
 
     }
 ?>
->>>>>>> 46155b4da169a57ea4cc4f191e33f96395cf47d2
+
 
 <html>
     <head>
