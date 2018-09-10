@@ -67,7 +67,7 @@ if(isset($_GET['email']))
  
     </head><br>
     <div class="b">
-      <a href="index.php">   <input type="button"
+      <a href="user_registration.php">   <input type="button"
 class="btn btn-primary" value="Sign up">  </a></div>
 
     <body>
