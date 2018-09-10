@@ -4,11 +4,13 @@
 <html>
     <head>
 <style>
+
     .b{float: right;}
     body{
         
         background-color: skyblue;}
-        </style>
+      
+    </style>
         
    <meta charset="utf-8">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
