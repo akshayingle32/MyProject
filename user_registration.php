@@ -223,13 +223,15 @@
             <span  id="mobileerror" class="text-danger font-weight-bold" > </span>
             </div>
         
-            <select id="ddlView" name="RegCouse">
-               
-                <option value="1" selected>Enginnering</option>
-                <option value="2">BCA</option>
-                <option value="3">BSC</option>
-            </select>  
-                
+            <div class="form-group">
+            <label >*Course:</label>
+                    <select id="ddlView" name="RegCouse">
+                    
+                        <option value="1" selected>Enginnering</option>
+                        <option value="2">BCA</option>
+                        <option value="3">BSC</option>
+                    </select>  
+            </div>    
            
             <br><br>
             <div>
