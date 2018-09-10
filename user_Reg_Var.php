@@ -17,15 +17,25 @@ if($Name=="" || $Email=="" || $Mob=="" || $Password=="" || $ConfPassword=="" || 
 else
 {
 
-// $query=mysql_query("insert into userregistration values('NULL','$Name','$Mob','$Course','$Email','$Password','$ConfPassword')");
-// 		if( $query )
-// 		{
-// 			echo " inserted";
-// 		}
-// 		else
-// 		{
-// 			echo "something is wrong";
-// 		}
-	echo "inseted";
+ $query=mysql_query("insert into userregistration values('NULL','$Name','$Mob','$Course','$Email','$Password','$ConfPassword')");
+ 		if( $query )
+		{
+ 			echo " inserted";
+ 		}
+ 		else
+		{
+ 			echo "something is wrong"; 
+ 		}
+	
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+>>>>>>> 1291a316ab564c939d8fce157df20ceaf1d218d6
 ?>
