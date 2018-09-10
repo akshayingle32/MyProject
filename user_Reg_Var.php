@@ -1,5 +1,9 @@
 
 <?php
+
+var_dump($_POST);
+
+
 $Name=$_POST['RegName'];
 $Email=$_POST['RegMail'];
 $Mob=$_POST['RegNum'];
