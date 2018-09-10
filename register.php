@@ -69,7 +69,23 @@
 p{
   text-align: left;
 }
-</style>  
+</style> 
+<script type="text/javascript">
+  
+  myFunction()
+  {
+      var mobileno=document.getElementById('mobile').value;
+     var mobilecheck=/^[789][0-9]{9}$/;
+                if((mobilecheck).test(mobileno))
+                {
+                document.getElementById('mobileerror').innerHTML="";
+                }else{
+                document.getElementById('mobileerror').innerHTML="invalid mobile Number ";
+                return false;
+                }
+
+  }
+</script> 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -96,7 +112,7 @@ p{
 
 <p>Please enter your Mobile Number:</p>
          <div class="form-group">       
-        <input type="Number" class="form-control" maxlength="14" min="0" max="10" name="RegNum" id="inputPassword" placeholder="Mobile Number"required>     
+        <input type="text" class="form-control" onfocus="myFunction(this)" name="RegNum" id="mobile" placeholder="Mobile Number"required>  <span  id="mobileerror" class="text-danger font-weight-bold" > </span>    
          </div>   
     
 <p>Please enter your Email:</p>
