@@ -3,25 +3,24 @@
 
 if($_SERVER['REQUEST_METHOD']=="POST")
 {
-	$Name=$_POST['RegName'];
-$Email=$_POST['RegMail'];
-$Mob=$_POST['RegNum'];
-$Password=$_POST['RegPass'];
-$ConfPassword=$_POST['RegConfPass'];
 
-$Course=$_POST['RegCouse'];
- echo "Server method is POST";
+	$Name=$_POST['RegName'];
+	$Email=$_POST['RegMail'];
+	$Mob=$_POST['RegNum'];
+	$Password=$_POST['RegPass'];
+	$ConfPassword=$_POST['RegConfPass'];
+	$Course=$_POST['RegCouse'];
+	 echo "Server method is POST";
 }
 elseif ($_SERVER['REQUEST_METHOD']=="GET")
  {
 	$Name=$_POST['RegName'];
-$Email=$_POST['RegMail'];
-$Mob=$_POST['RegNum'];
-$Password=$_POST['RegPass'];
-$ConfPassword=$_POST['RegConfPass'];
-
-$Course=$_POST['RegCouse'];
- echo "Server method is GET";
+	$Email=$_POST['RegMail'];
+	$Mob=$_POST['RegNum'];
+	$Password=$_POST['RegPass'];
+	$ConfPassword=$_POST['RegConfPass'];
+	$Course=$_POST['RegCouse'];
+	 echo "Server method is GET";
 }
 
 
