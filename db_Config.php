@@ -1,10 +1,10 @@
 <?php
-$cn=mysql_connect("localhost","root","hitler");
- mysql_select_db("user");
+$cn=mysqli_connect("localhost","root","hitler");
+ mysqli_select_db("user");
 
  if(!$cn)
 		{
-		 die("connection failed".mysql_connect_error( ));
+		 die("connection failed".mysqli_connect_error( ));
 		}
 		
 
