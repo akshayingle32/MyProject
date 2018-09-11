@@ -26,6 +26,8 @@ else
 		{
  			die("something is wrong:".mysql_error()); 
  		}
+
+ 		
 	
 }
 <<<<<<< HEAD
