@@ -10,12 +10,13 @@ include('db_Config.php');
 
     $email=$_POST['email'];
     $password=$_POST['pass'];
-    echo "$email,$password";
+    echo "<p>$email</p><br>";
+    echo "<p>$password</p>";
     //$sql = "SELECT * FROM userregistration WHERE RegEmail='".$email."' AND
    // RegPswd='".$password."'";
 
     $res =mysqli_query($con,"SELECT * FROM userregistration");
-    var_dump($res);
+    //var_dump($res);
     if(!$res)
        {
 

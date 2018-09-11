@@ -1,5 +1,5 @@
 <?php
-var_dump($_SESSION);
+//var_dump($_SESSION);
 session_start();
 ?>
 
@@ -37,10 +37,10 @@ session_start();
     <br>
         <div class="container">
  
-        <div class="alert alert-success"><?php echo $_SESSION['message']; ?></div>
- 
+        <!--<div class="alert alert-success"><?php echo $_SESSION['message']; ?></div>-->
+       
         <div class="b">
-      <a href="register.php">   <input type="button"
+      <a href="user_registration.php">   <input type="button"
 class="btn btn-primary" value="Sign up">  </a></div>
 
     
