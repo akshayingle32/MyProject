@@ -121,8 +121,8 @@
                     }
 
             </script>
-     </head>
-      <body>
+    </head>
+    <body>
 
         <h1><center>Registration Form:</center></h1>
             <div class="container">
@@ -134,7 +134,7 @@
        
             <div class="form-group">
             <label >*Name:</label>
-            <input type="text" class="form-control" name="RegName1" id="name" placeholder="Enter name" onfocus="myFunction2(this)" required>
+            <input type="text" class="form-control" name="RegName" id="name" placeholder="Enter name" onfocus="myFunction2(this)" required>
             <span id="usererror" class="text-danger font-weight-bold" > </span>
             </div>
         
@@ -177,9 +177,8 @@
             <div>
                 <input type="submit" class="btn btn-primary" value="Submit" >
                 <span id="s1" ></span>
-                </form>
             </div>   
-        
+        </form>
     </body>
 
 </html>
