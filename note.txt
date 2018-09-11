@@ -1,0 +1,4 @@
+
+
+http://localhost/akshay/MyProject/user_Reg_Var.php?RegName1=sagar&RegMail1=gmail@gmail.com&RegNum1=123456789&RegPass1=123&RegConfPass=23454&RegCouse1=BCA
+

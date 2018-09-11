@@ -167,9 +167,9 @@
             <label >*Course:</label>
                     <select id="ddlView" name="RegCouse">
                     
-                        <option value="1" selected>Enginnering</option>
-                        <option value="2">BCA</option>
-                        <option value="3">BSC</option>
+                        <option value="Enginnering" selected>Enginnering</option>
+                        <option value="BCA">BCA</option>
+                        <option value="BSC">BSC</option>
                     </select>  
             </div>    
            
