@@ -2,6 +2,9 @@
    <body>
       
       <?php
+      session_start();
+      $_SESSION['message'] = "switch case";
+
          $d = date("D");
          
          switch ($d){
