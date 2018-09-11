@@ -172,18 +172,23 @@
                         <option value="BSC">BSC</option>
                     </select>  
             </div>    
+
+            
            
             <br><br>
-            <div>
+            <div class="col-md-2">
                 <input type="submit" class="btn btn-primary" value="Submit" >
                 <span id="s1" ></span>
+               
             </div>   
+            <div class="col-md-10   ">
+            
+                <a href="user_login.php"> 
+                <h5>Already have an Account</h5>
+                </a>
+            </div>    
         </form>
+        
     </body>
 
 </html>
-
-
-	
-	
-	
