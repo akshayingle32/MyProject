@@ -10,13 +10,24 @@ include('db_Config.php');
 
     $email=$_POST['email'];
     $password=$_POST['pass'];
-
+   // echo $email."<br>".$password."<br>";
     $sql = "SELECT * FROM userregistration WHERE RegEmail='".$email."' AND
-    RegPswd='".$password."'";
+   RegPswd='".$password."'";
 
-    $res =mysql_query($sql) or die("error to find data".mysql_error());
+    $res =mysqli_query($con,$sql);
+    // $display=mysqli_result($res,0,0);
+    // echo $display."<br>";
 
-    $num_rows=mysql_num_rows($res);
+    // var_dump($res);
+    // if(!$res)
+    //    {
+
+    //     $msg = die("error to find data".mysql_error());
+    //    $_SESSION['message']= $msg;
+    //      header('location:user_  header('location:user_profile.php');.php'); 
+
+    //    }
+    $num_rows=mysqli_num_rows($res);
 
 
     if($num_rows==1)
@@ -25,8 +36,8 @@ include('db_Config.php');
         /*user is session name*/
       
         $query="SELECT id FROM `userregistration` WHERE RegEmail='".$email."'";
-        $user=mysql_query($query);
-        $session_user=mysql_result($user,0,0);
+        $user=mysqli_query($con,$query);
+        $session_user=mysqli_result($user,0,0);
         //echo $session_user;
         $_SESSION['user'] = $session_user;
         
@@ -37,6 +48,10 @@ include('db_Config.php');
     }
     else
     {
-       echo "login failed";
-}
+      $_SESSION['message'] = "please enter valid fields";
+        header('location:user_login.php');
+    }
+
     ?> 
+    
+   
