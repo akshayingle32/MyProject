@@ -1,5 +1,5 @@
 <?php
-// var_dump($_SESSION);
+
 session_start();
 ?>
 
@@ -37,6 +37,7 @@ session_start();
     <br>
         <div class="container">
  
+
         <div class="alert alert-success">
             <?php
               if(!empty($_SESSION['message']))
@@ -50,7 +51,7 @@ session_start();
             ?>
              
          </div>
- 
+
         <div class="b">
       <a href="user_registration.php">   <input type="button"
 class="btn btn-primary" value="Sign up">  </a></div>

@@ -1,4 +1,6 @@
-<!doctype html>
+<?php
+ session_start();
+?><!doctype html>
 <html>
     <head>
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -6,6 +8,7 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
                 <style>
+
                 .d1{
                 
                     margin-left:500px;
@@ -121,9 +124,21 @@
                     }
 
             </script>
-     </head>
-      <body>
-
+    </head>
+    <body>
+        <div class="alert alert-success">
+            <?php
+              if(!empty($_SESSION['message']))
+              {
+                echo $_SESSION['message']; 
+              }
+              else
+              {
+                echo "This is Registration Form";
+              }     
+            ?>
+             
+         </div>
         <h1><center>Registration Form:</center></h1>
             <div class="container">
 
@@ -176,10 +191,10 @@
             <br><br>
             <div>
                 <input type="submit" class="btn btn-primary" value="Submit" >
-                <span id="s1" ></span>
-                </form>
+                 
             </div>   
-        
+        </form><div class="b">
+       <a href="user_registration.php">   <button class="btn btn-primary" value="Sign up"> Sign up</button> </a></div>
     </body>
 
 </html>
