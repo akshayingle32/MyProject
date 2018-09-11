@@ -134,7 +134,7 @@
        
             <div class="form-group">
             <label >*Name:</label>
-            <input type="text" class="form-control" name="RegName1" id="name" placeholder="Enter name" onfocus="myFunction2(this)" required>
+            <input type="text" class="form-control" name="RegName" id="name" placeholder="Enter name" onfocus="myFunction2(this)" required>
             <span id="usererror" class="text-danger font-weight-bold" > </span>
             </div>
         

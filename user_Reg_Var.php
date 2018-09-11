@@ -23,37 +23,38 @@ elseif(isset($_POST['RegPass'])){  $Password= $_POST['RegPass'];}
 else{ $Password="";}
 
 if(isset($_GET['RegConfPass'])) { $ConfPassword= $_GET['RegConfPass'];}
-elseif(isset($_POST['RegConfPass'])){  $ConfPassword= $_POST['RegNRegConfPassame'];}
+elseif(isset($_POST['RegConfPass'])){  $ConfPassword= $_POST['RegConfPass'];}
 else{ $ConfPassword="";}
 
-// $Name=$_POST['RegName'];
+ $name=$_POST['RegName'];
 // $Email=$_POST['RegMail'];
 // $Mob=$_POST['RegNum'];
 // $Password=$_POST['RegPass'];
 // $ConfPassword=$_POST['RegConfPass'];
-echo $Name,$Email,$Password,$Mob;
+echo $Name,$Email,$Password,$Mob,$ConfPassword;
 // $Course=$_POST['RegCouse'];
 
 // include('db_Config.php');
 
 // echo "step1";
 
-if($Name=="" || $Email=="" || $Mob=="" || $Password=="" || $ConfPassword=="" || $Course=="")
+if($Name="" && $Email="" && $Mob="" && $Password="" && $ConfPassword="" && $Course="")
 {
 
 	echo "<br> <br> Please enter valid field<br><br><br>";
+	die("something is wrong:".mysql_error()); 
 	// sleep(2);
-	header("location:user_registration.php");
+	//header("location:user_registration.php");
 
 }
-if($Name=="" && $Email=="" && $Mob=="" && $Password=="" && $ConfPassword=="" && $Course=="")
-{
+// if($Name=="" && $Email=="" && $Mob=="" && $Password=="" && $ConfPassword=="" && $Course=="")
+// {
 
-	echo "Please enter valid field";
-	sleep(2);
-	// header("location:user_registration.php");
+// 	echo "Please enter valid field";
+// 	sleep(2);
+// 	// header("location:user_registration.php");
 
-}
+// }
 // else
 // {
 
@@ -86,8 +87,10 @@ if ($conn->connect_error) {
 
 
 // $sql = "INSERT INTO MyGuests (firstname, lastname, email) VALUES ('John', 'Doe', 'john@example.com')";
-
-$sql = "insert into userregistration (RegName, RegMob, RegCourse, RegEmail, RegPswd, RegConfPaswd) values('$Name','$Mob','$Course','$Email','$Password','$ConfPassword')";
+if($Password==$ConfPassword)
+{
+	
+$sql = "insert into userregistration (RegName, RegMob, RegCourse, RegEmail, RegPswd, RegConfPaswd) values('$name','$Mob','$Course','$Email','$Password','$ConfPassword')";
 
 // var_dump($sql);
 if ($conn->query($sql) === TRUE) {
@@ -101,7 +104,11 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
-
+}
+else
+{
+	$_SESSION['message'] = "password does not match";
+}
 
 
 
