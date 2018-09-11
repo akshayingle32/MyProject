@@ -4,7 +4,7 @@ $cn=mysql_connect("localhost","root","hitler");
 
  if(!$cn)
 		{
-		 die("connection failed".mysql_connect_error());
+		 die("connection failed".mysql_connect_error( ));
 		}
 		
 
