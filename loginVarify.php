@@ -29,6 +29,7 @@ include('db_Config.php');
         $session_user=mysql_result($user,0,0);
         //echo $session_user;
         $_SESSION['user'] = $session_user;
+        
         header('location:user_profile.php');
             exit;
        

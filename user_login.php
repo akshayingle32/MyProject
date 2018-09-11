@@ -1,6 +1,8 @@
 <?php
 var_dump($_SESSION);
+
 session_start();
+
 ?>
 
 
@@ -40,14 +42,14 @@ session_start();
         <div class="alert alert-success"><?php echo $_SESSION['message']; ?></div>
  
         <div class="b">
-      <a href="register.php">   <input type="button"
-class="btn btn-primary" value="Sign up">  </a></div>
+        <a href="user_registration.php">   <input type="button" class="btn btn-primary" value="Sign up">  </a>
+        </div>
 
+     <div class="container">
     
- <div class="container">
-    <h1 align="center" > Welcome to User Login  </h1><br><br>
+     <h1 align="center" > Welcome to User Login  </h1><br><br>
             
-    <form action="loginVarify.php" method="POST">
+    <form action="user_profile.php" method="POST">
         <div class="form-group">
        
         <label>Email: </label>
@@ -60,8 +62,10 @@ class="btn btn-primary" value="Sign up">  </a></div>
 
         </div>
         <input type="submit"  class="btn btn-primary" value="Login">   <br><br>
+          
           </form>
         </div>
     </div>
+
     </body>
 </html>
