@@ -1,4 +1,7 @@
-
+<?php
+var_dump($_SESSION);
+session_start();
+?>
 
 
 <html>
@@ -23,9 +26,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
  
-    </head><body><br>
+    </head>
+    
+    
+    <body>
+        
+    
+    
+    
+    <br>
         <div class="container">
-    <div class="b">
+ 
+        <div class="alert alert-success"><?php echo $_SESSION['message']; ?></div>
+ 
+        <div class="b">
       <a href="register.php">   <input type="button"
 class="btn btn-primary" value="Sign up">  </a></div>
 
