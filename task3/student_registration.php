@@ -13,12 +13,13 @@ if(isset($_POST['submit']))
 
     $name=$_POST['name'];
     $email=$_POST['email'];
-	$password=$_POST['password'];
+	$pass=$_POST['password'];
 	$mobile=$_POST['mobile'];
     $course=$_POST['course'];
+    //echo $name,$email,$password,$mobile,$course."<br>";
 
 	   $query="insert into student_info(`name`,`email`,`password`,`mobileno`,`course`)
-       values('$name','$email','$password','$mobile','$course')";
+       values('$name','$email','$pass','$mobile','$course')";
      
         $result= mysqli_query($con,$query);
      
@@ -56,10 +57,10 @@ if(isset($_POST['submit']))
 	 
     <body style="background-color:#d9fcd9;">
     
-        <div class="container" style="width:40%; background-color:#d0d3d8;  border-radius: 20px; margin-top:50px;"><br>
+        <div class="container" style="width:40%; background-color:#d0d3d8;  border-radius: 20px; margin-top:40px;"><br>
             <h2 class="text-center" style="color:#ffffff; background-color:#d31d4e; border-radius: 15px;">Student Registration</h2><br>
            
-            <form action="student_login.php"  method="post" onsubmit="return regular_validation()">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>"  method="post" onsubmit="return regular_validation()">
 
                 <div class="form-group">
                 <label>*Name:</label>
@@ -77,6 +78,12 @@ if(isset($_POST['submit']))
                 <label>*Password:</label>
                 <input type="password" 	name="password" id="password" class="form-control">
                 <span id="passworderror" class="text-danger font-weight-bold"> </span>
+                </div>
+
+                <div class="form-group">
+                <label>*Confirm Password:</label>
+                <input type="password" 	name="password" id="cpassword" class="form-control">
+                <span id="cpassworderror" class="text-danger font-weight-bold"> </span>
                 </div>
                 
                 <div class="form-group">

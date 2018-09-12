@@ -6,7 +6,8 @@ if(!empty($_SESSION['message']))
     $msg=$_SESSION['message'];
    echo "<script type='text/javascript'>
     alert_box('".$msg."');
-     </script>";    }
+     </script>";  
+       }
      else
      {
         session_destroy();
