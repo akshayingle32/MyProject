@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="js/user_validation.js"></script>
+        <script src="validation.js"></script>
     
     </head> <br>
        
@@ -57,7 +57,7 @@
                 
                 <input type="submit" name="submit" class="btn btn-primary" value="Register">
                 
-                    <h5>Already have an Account? <a href="login.php"> Sign in </a> </h5><br>
+                    <h5>Already have an Account? <a href="student_login.php"> Sign in </a> </h5><br>
                 
 
 
