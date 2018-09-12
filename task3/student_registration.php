@@ -6,7 +6,7 @@ $password = "dms";
 $dbname = "user";
 
 $con =mysqli_connect($servername, $username, $password,$dbname);
-
+include("alert_box.php");
 
 if(isset($_POST['submit']))
  {  
@@ -26,11 +26,17 @@ if(isset($_POST['submit']))
 
     if($result){
         
-         echo"<script> user register successfully </script>";
+           $msg="user register successfully "
+   echo "<script type='text/javascript'>
+    alert_box('".$msg."');
+     </script>"; 
         }
         
     else{
-      echo "something is wrong";
+    $msg="something is wrong ";
+   echo "<script type='text/javascript'>
+    alert_box('".$msg."');
+     </script>"; 
     }
   }
 
