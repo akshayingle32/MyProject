@@ -7,6 +7,10 @@ if(!empty($_SESSION['message']))
    echo "<script type='text/javascript'>
     alert_box('".$msg."');
      </script>";    }
+     else
+     {
+        session_destroy();
+     }
 
 ?><!DOCTYPE html>
 <html lang="en">

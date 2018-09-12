@@ -73,21 +73,40 @@ $table_name= "student_info";
 
 
    // echo $email."<br>".$password."<br>";
-    $sql = "SELECT * FROM ".$table_name." WHERE email='".$email."' AND
-   password='".$pass."'";
-
-    $result =mysqli_query($con,$sql);
-    if (!$result)
+    $sql = "SELECT * FROM ".$table_name." WHERE email='".$email."'";
+     $sql_p = "SELECT * FROM ".$table_name." WHERE  password='".$pass."'";
+    $r1 =mysqli_query($con,$sql);
+    $r2= mysqli_query($con,$sql_p);
+    
+    $rows1=mysqli_fetch_array($r1,MYSQLI_NUM);
+    $rows2=mysqli_fetch_array($r2,MYSQLI_NUM);
+    
+    if (!$rows1)
       {
         //die("no data selected:".mysql_error());
-        $_SESSION['message']="Invalide filed";
+        $_SESSION['message']="Invalide user id";
+        header('location:student_login.php');
+        //echo " email";
       }
+      elseif (!$rows2)
+       {
+         $_SESSION['message']="Invalide user password";
+         header('location:student_login.php');
+         //echo "password";
+      }
+      elseif (!$rows1 && !$rows2) {
+            //echo "both";
+          # code...
+        $_SESSION['message']="Invalide user id and password";
+        header('location:student_login.php');
+      }
+
     else
       {
-         $rows=mysqli_fetch_array($result,MYSQLI_NUM);
-        //echo "<br>".$rows[0].$rows[1].$rows[2].$rows[3];
+          $sql_main = "SELECT * FROM ".$table_name." WHERE email='".$email."' AND password='".$pass."'";
+    $result=mysqli_query($con,$sql_main);
         $num_rows=mysqli_num_rows($result);
-
+   
 
             if($num_rows==1)
             
@@ -114,7 +133,7 @@ $table_name= "student_info";
               $_SESSION['message'] = "please enter valid fields";
                 header('location:student_login.php');
 
-                //echo "login failed";
+                echo "login failed";
             }
 
 }
