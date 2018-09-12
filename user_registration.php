@@ -16,8 +16,16 @@
                     }
             
                 </style>  
+<<<<<<< HEAD
+            <script>
+
+                    
+
+            
+=======
                  <script>
         
+>>>>>>> 597b2bbc885429d749094a6a04750e2955518c00
                 function simplevalidation(){
             
                 var name=document.getElementById('name').value;
@@ -33,7 +41,7 @@
             
                 var usercheck=/^[A-Za-z 0-9]{3,10}$/;
                 if(name==""){
-                    document.getElementById('usererror').innerHTML="must be filled";
+                    document.getElementById('usererror').innerHTML="**must be filled";
 
                 }
 
@@ -100,9 +108,7 @@
                 }
             
             
-                    document.getElementById('s1').innerHTML="Your Registration is succssfull. ";
-                    return true;
-
+                   
                 }
                 
                     // Mouseonover and mouseonout events on Submit button
@@ -123,9 +129,20 @@
                         document.getElementById("passerror").innerHTML = "You wrote: " + x;
                     }
 
+
+                        //alert for registration successful
+        
+                function myFunction22() {
+                    alert("registration successful!");
+                    window.location.href='user_login.php';
+                }
+
+
+
             </script>
     </head>
     <body>
+<<<<<<< HEAD
         <div>
             <?php
             include('alertBox.php');
@@ -141,6 +158,19 @@
                 echo "This is Registration Form";
               }     
             ?>
+=======
+        <!-- <div class="alert alert-success">
+            <!-- <?php
+            //   if(!empty($_SESSION['message']))
+            //   {
+            //     echo $_SESSION['message']; 
+            //   }
+            //   else
+            //   {
+            //     echo "This is Registration Form";
+            //   }     
+            ?> -->
+>>>>>>> adab5be90b04c07d42ca8623c906ccdc311f1f45
              
          </div>
         <h1><center>Registration Form:</center></h1>
@@ -191,19 +221,24 @@
                         <option value="BSC">BSC</option>
                     </select>  
             </div>    
+
+            
            
             <br><br>
             <div>
-                <input type="submit" class="btn btn-primary" value="Submit" >
+                <input type="submit" class="btn btn-primary" value="Submit" onclick="myFunction222
+                
+                ()">
                  
             </div>   
-        </form><div class="b">
-       <a href="user_registration.php">   <button class="btn btn-primary" value="Sign up"> Sign up</button> </a></div>
+       
+            
+            <div class="b">
+                <a href="user_login.php">   <button class="btn btn-primary" value="Sign up" > Sign up</button> </a>
+            </div>
+       </form>
     </body>
 
 </html>
 
 
-	
-	
-	

@@ -1,3 +1,34 @@
+<?php
+var_dump();
+$host="localhost";
+$user="root";
+$password="";
+$db="task";
+mysql_connect($host,$user,$password);
+mysql_select_db($db);
+
+if(isset($_POST['submit']))
+ {  
+    $uname=$_POST['user'];
+	$pass=$_POST['pass'];
+	$conpass=$_POST['conpass'];
+	$email=$_POST['email'];
+    $mobile=$_POST['mobile'];
+    
+	$query="insert into user_register(`username`,`password`,`conpassword`,`email`,`mobileno`)
+	values('$uname','$pass','$conpass','$email','$mobile')";
+	$status=mysql_query($query);
+
+    if($status){
+        
+         echo"<script> user register successfully </script>";
+        }
+        
+    else{
+      echo "something wrong";
+    }
+  }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,38 +41,38 @@
         <script src="js/user_validation.js"></script>
     
     </head> <br>
-       
+       <h2 class="text-center ">User Registration With Validation</h2>
             
-    <div>        
-    
-    </div>
+            
+    <a href="login.php" align="center"><input type="submit" name="submit" class="btn btn-primary" value="Login"></a></div1>
 	 
-    <body style="background-color:#d9fcd9;">
     
-        <div class="container" style="width:40%; background-color:#d0d3d8;  border-radius: 20px; margin-top:50px;"><br>
-            <h2 class="text-center" style="color:#6b96db; background-color:#dfff60; border-radius: 15px;">Student Registration</h2><br>
+    
+    <body>
+    
+        <div class="container"><br>
             <form action="index.php" onsubmit="return regular_validation()" method="post">
 
                 <div class="form-group">
-                <label>*Name:</label>
+                <label>Name:</label>
                 <input type="text" name="user" id="username" class="form-control">
                 <span id="usererror" class="text-danger font-weight-bold"></span>
                 </div>
                 
                 <div class="form-group">
-                <label>*Email:</label>
+                <label>Email:</label>
                 <input type="email" 	name="email" id="email" class="form-control">
                 <span id="emailerror" class="text-danger font-weight-bold"> </span>
                 </div>
                 
                 <div class="form-group">
-                <label>*Password:</label>
+                <label>Passwor:</label>
                 <input type="password" 	name="pass" id="password" class="form-control">
                 <span id="passworderror" class="text-danger font-weight-bold"> </span>
                 </div>
                 
                 <div class="form-group">
-                <label>*mobile No:</label>
+                <label>mobile No:</label>
                 <input type="text" 	name="mobile" id="mobilenumber" class="form-control">
                 <span id="mobileerror" class="text-danger font-weight-bold"> </span>
                 </div>
@@ -53,12 +84,10 @@
                             <option value="BCA">BCA</option>
                             <option value="BSC">BSC</option>
                         </select>  
-                </div>    <br>
+                </div>    
                 
-                <input type="submit" name="submit" class="btn btn-primary" value="Register">
-                
-                    <h5>Already have an Account? <a href="login.php"> Sign in </a> </h5><br>
-                
+                <input type="submit" name="submit" class="btn btn-primary" value="Sign Up">
+            
 
 
 
