@@ -1,6 +1,11 @@
 <?php
+<<<<<<< HEAD
+//var_dump($_SESSION);
+=======
+>>>>>>> 157abe9d2628141a238384b1bf8574474f6b6903
 
 session_start();
+
 ?>
 
 
@@ -53,14 +58,19 @@ session_start();
          </div>
 
         <div class="b">
+<<<<<<< HEAD
+        <a href="user_registration.php">   <input type="button" class="btn btn-primary" value="Sign up">  </a>
+        </div>
+=======
       <a href="user_registration.php">   <input type="button"
 class="btn btn-primary" value="Sign up">  </a></div>
+>>>>>>> 157abe9d2628141a238384b1bf8574474f6b6903
 
+     <div class="container">
     
- <div class="container">
-    <h1 align="center" > Welcome to User Login  </h1><br><br>
+     <h1 align="center" > Welcome to User Login  </h1><br><br>
             
-    <form action="loginVarify.php" method="POST">
+    <form action="user_profile.php" method="POST">
         <div class="form-group">
        
         <label>Email: </label>
@@ -73,8 +83,10 @@ class="btn btn-primary" value="Sign up">  </a></div>
 
         </div>
         <input type="submit"  class="btn btn-primary" value="Login">   <br><br>
+          
           </form>
         </div>
     </div>
+
     </body>
 </html>

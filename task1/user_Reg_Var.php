@@ -3,6 +3,7 @@
 session_start();
 // var_dump($_POST);
 // var_dump($_SERVER);
+
 if(isset($_GET['RegName'])) { $Name= $_GET['RegName'];}
 elseif(isset($_POST['RegName'])){  $Name= $_POST['RegName'];}
 else{ $Name="";}
@@ -101,10 +102,5 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
-
-
-
-
-
 
 ?>

@@ -28,7 +28,6 @@ else{ $ConfPassword="";}
 // $Mob=$_POST['RegNum'];
 // $Password=$_POST['RegPass'];
 // $ConfPassword=$_POST['RegConfPass'];
-
 // $Course=$_POST['RegCouse'];
 
 // include('db_Config.php');
@@ -40,6 +39,7 @@ if($Name="" && $Email="" && $Mob="" && $Password="" && $ConfPassword="" && $Cour
 
 
 	echo "<br> <br> Please enter valid field<br><br><br>";
+	
 	die("something is wrong:".mysql_error()); 
 
 	header("location:user_registration.php");
@@ -62,7 +62,6 @@ if ($conn->connect_error) {
 }
 
 
-
 // $sql = "INSERT INTO MyGuests (firstname, lastname, email) VALUES ('John', 'Doe', 'john@example.com')";
 
 if($Password==$ConfPassword)
@@ -72,8 +71,11 @@ $sql = "insert into userregistration (RegName, RegMob, RegCourse, RegEmail, RegP
    
 
 if ($conn->query($sql) === TRUE) {
+	
 	echo "<br><br>";
+
 	echo "New record created successfully";
+
 	$_SESSION['message'] = "Registration succesful!";
 	sleep(2);
 	header('location:user_login.php');

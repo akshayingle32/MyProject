@@ -3,25 +3,29 @@
 ?><!doctype html>
 <html>
     <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+             <meta name="viewport" content="width=device-width, initial-scale=1">
+             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
                 <style>
 
                 .d1{
                 
                     margin-left:500px;
                     margin-top:26px;
-                
-                }
+                    }
             
                 </style>  
+<<<<<<< HEAD
             <script>
 
                     
 
             
+=======
+                 <script>
+        
+>>>>>>> 597b2bbc885429d749094a6a04750e2955518c00
                 function simplevalidation(){
             
                 var name=document.getElementById('name').value;
@@ -40,12 +44,13 @@
                     document.getElementById('usererror').innerHTML="**must be filled";
 
                 }
+
                 if((usercheck).test(name))
                 {
                 document.getElementById('usererror').innerHTML="";
                 }else{
                 document.getElementById('usererror').innerHTML="invalid username";
-                return false;
+                 return false;
                 }
             
             
