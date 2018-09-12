@@ -9,8 +9,8 @@ $con =mysqli_connect($servername, $username, $password,$dbname);
 
 
 if(isset($_POST['submit']))
- {  
-
+ 
+{  
     $name=$_POST['name'];
     $email=$_POST['email'];
 	$password=$_POST['password'];
@@ -94,7 +94,7 @@ if(isset($_POST['submit']))
                         </select>  
                 </div>    <br>
                 
-                <input type="submit" name="submit" class="btn btn-primary" value="Register">
+                   <input type="submit" name="submit" class="btn btn-primary" value="Register">
                 
                     <h5>Already have an Account? <a href="student_login.php"> Sign in </a> </h5><br>
                 
