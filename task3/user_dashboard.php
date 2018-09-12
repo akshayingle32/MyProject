@@ -14,12 +14,13 @@ include("db_Config.php");
 <body>
  
 <div class="container">
-  <div><a href='user_logout.php'>logout</a></div>
+  <div><a href='logout.php'>logout</a></div>
   <h2>Panel Heading</h2>
   <div class="panel panel-default">
     <div class="panel-heading">Student DashBoard</div>
      <div class="panel-body">
       <?php
+
         if(!empty( $_SESSION['user']))
          {
            $user=$_SESSION['user'];
@@ -78,8 +79,8 @@ include("db_Config.php");
           }
           else
           {
-            //header('location:user_login.php');
-            echo "login failed2";
+            header('location:student_login.php');
+            //echo "login failed2";
           }
 
 

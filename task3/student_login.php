@@ -19,7 +19,7 @@
     
         <div class="container" style="width:40%; background-color:#d0d3d8;  border-radius: 20px; margin-top:50px;"><br>
             <h2 class="text-center" style="color:#ffffff; background-color:#d31d4e; border-radius: 15px;">Student Login</h2><br>
-            <form action="#"  method="post">
+            <form action="login_varify.php"  method="POST">
 
                 
                 <div class="form-group">

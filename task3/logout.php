@@ -6,6 +6,6 @@ session_start();
 session_destroy();
 
 /*here user session are destroyed when page redirect to login */
-header("Location:user_login.php");
+header("Location:student_login.php");
        
 ?>

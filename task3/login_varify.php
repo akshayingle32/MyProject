@@ -7,68 +7,68 @@ session_start();
 /* here is database file add*/
 include('db_Config.php');
 
-// if ($_SERVER['REQUEST_METHOD']=="POST")
-// {
-//     if (!empty($_POST['email'])
-//      {  
-//       $email=$_POST['email'];
-//      }
-//      else
-//      {
+if ($_SERVER['REQUEST_METHOD']=="POST")
+{
+    if (!empty($_POST['email']))
+     {  
+      $email=$_POST['email'];
+     }
+     else
+     {
 
-//      }
-//      if (!empty($_POST['pass'])
-//      {  
-//        $pass=$_POST['pass'];
-//      }
-//      else
-//      {
+     }
+     if (!empty($_POST['password']))
+     {  
+       $pass=$_POST['password'];
+     }
+     else
+     {
         
-//      }
+     }
    
-// }
-// elseif ($_SERVER['REQUEST_METHOD']=="GET") 
-// {
-//     if (!empty($_GET['email'])
-//      {  
-//       $email=$_GET['email'];
-//      }
-//      else
-//      {
+}
+elseif ($_SERVER['REQUEST_METHOD']=="GET") 
+{
+    if (!empty($_GET['email']))
+     {  
+      $email=$_GET['email'];
+     }
+     else
+     {
 
-//      }
-//      if (!empty($_GET['pass'])
-//      {  
-//        $pass=$_GET['pass'];
-//      }
-//      else
-//      {
+     }
+     if (!empty($_GET['password']))
+     {  
+       $pass=$_GET['password'];
+     }
+     else
+     {
         
-//      }
+     }
    
-// }
-// elseif ($_SERVER['REQUEST_METHOD']=="REQUEST") 
-// {
-//       if (!empty($_REQUEST['email'])
-//      {  
-//       $email=$_REQUEST['email'];
-//      }
-//      else
-//      {
+}
+elseif ($_SERVER['REQUEST_METHOD']=="REQUEST") 
+{
+      if (!empty($_REQUEST['email']))
+     {  
+      $email=$_REQUEST['email'];
+     }
+     else
+     {
 
-//      }
-//      if (!empty($_REQUEST['pass'])
-//      {  
-//        $pass=$_REQUEST['pass'];
-//      }
-//      else
-//      {
+     }
+     if (!empty($_REQUEST['password']))
+     {  
+       $pass=$_REQUEST['password'];
+     }
+     else
+     {
         
-//      }
+     }
     
-// }
-$email="goutampalkar@gmail.com";
- $pass="palkar@321";
+}
+//$email="goutampalkar@gmail.com";
+// $pass="palkar@321";
 $table_name= "student_info";
 
 
