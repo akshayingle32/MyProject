@@ -26,8 +26,8 @@ if(isset($_POST['submit']))
 
     if($result){
         
-           $msg="user register successfully "
-   echo "<script type='text/javascript'>
+           $msg="user register successfully ";
+      echo "<script type='text/javascript'>
     alert_box('".$msg."');
      </script>"; 
         }
@@ -66,7 +66,7 @@ if(isset($_POST['submit']))
         <div class="container" style="width:40%; background-color:#d0d3d8;  border-radius: 20px; margin-top:40px;"><br>
             <h2 class="text-center" style="color:#ffffff; background-color:#d31d4e; border-radius: 15px;">Student Registration</h2><br>
            
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>"  method="post" onsubmit="return regular_validation()">
+            <form action="user_login.php"  method="post" onsubmit="return regular_validation()">
 
                 <div class="form-group">
                 <label>*Name:</label>
