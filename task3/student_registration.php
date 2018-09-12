@@ -82,7 +82,7 @@ if(isset($_POST['submit']))
 
                 <div class="form-group">
                 <label>*Confirm Password:</label>
-                <input type="password" 	name="password" id="cpassword" class="form-control">
+                <input type="password" 	name="cpassword" id="cpassword" class="form-control">
                 <span id="cpassworderror" class="text-danger font-weight-bold"> </span>
                 </div>
                 
