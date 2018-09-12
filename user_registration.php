@@ -142,6 +142,23 @@
             </script>
     </head>
     <body>
+<<<<<<< HEAD
+        <div>
+            <?php
+            include('alertBox.php');
+              if(!empty($_SESSION['register_error']))
+              {
+                $msg = $_SESSION['register_error']; 
+                echo "<script type='text/javascript'>";
+                echo "alert_box(".$msg.")";
+                echo "</script>";
+              }
+              else
+              {
+                echo "This is Registration Form";
+              }     
+            ?>
+=======
         <!-- <div class="alert alert-success">
             <!-- <?php
             //   if(!empty($_SESSION['message']))
@@ -153,6 +170,7 @@
             //     echo "This is Registration Form";
             //   }     
             ?> -->
+>>>>>>> adab5be90b04c07d42ca8623c906ccdc311f1f45
              
          </div>
         <h1><center>Registration Form:</center></h1>

@@ -57,7 +57,8 @@ $dbname = "user";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
-if ($conn->connect_error) {
+if ($conn->connect_error) 
+{
     die("Connection failed: " . $conn->connect_error);
 }
 
@@ -67,6 +68,7 @@ if ($conn->connect_error) {
 if($Password==$ConfPassword)
 {
 	
+
 $sql = "insert into userregistration (RegName, RegMob, RegCourse, RegEmail, RegPswd, RegConfPaswd) values('$name','$Mob','$Course','$Email','$Password','$ConfPassword')";
    
 
@@ -80,13 +82,25 @@ if ($conn->query($sql) === TRUE) {
 	sleep(2);
 	header('location:user_login.php');
 } else {
+<<<<<<< HEAD
+    echo "Error: " . $sql . "<br>" . $conn->error;
+=======
 	$_SESSION['message'] = $conn->error;
 	header("location:user_registration.php");
+>>>>>>> adab5be90b04c07d42ca8623c906ccdc311f1f45
 
 }
 
 $conn->close();
 
+<<<<<<< HEAD
+
+// else
+// {
+// 	$_SESSION['register_error'] = "password does not match";
+// 	header("location:user_registration.php");
+// }
+=======
 }
 else
 {
@@ -94,6 +108,7 @@ else
 	header("location:user_registration.php");
 
 }
+>>>>>>> adab5be90b04c07d42ca8623c906ccdc311f1f45
 
 
 ?>
