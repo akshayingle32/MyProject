@@ -34,7 +34,7 @@ var mobilecheck= /^[789][0-9]{9}$/;
 //conform password section
 	
 	
-if(password.match(cpassword)){
+if(password==cpassword){
 	    
 	    document.getElementById('cpassworderror').innerHTML="";
 	}else{

@@ -52,14 +52,15 @@ if(isset($_POST['submit']))
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <!-- <script src="validation.js"></script> -->
 
-        <script src="validation.js"></script>
+        <script src="validation.js">var password=document.getElementById('password').value;
+    var cpassword=document.getElementById('cpassword').value;
+document.write(password);
+document.write(cpassword);
+
+</script>
     
-    </head> <br>
-       
-            
-    <div>        
-    
-    </div>
+    </head>  
+
 	 
     <body style="background-color:#d9fcd9;">
     
