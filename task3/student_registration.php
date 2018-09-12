@@ -13,12 +13,12 @@ if(isset($_POST['submit']))
 {  
     $name=$_POST['name'];
     $email=$_POST['email'];
-	$password=$_POST['password'];
+	$pass=$_POST['password'];
 	$mobile=$_POST['mobile'];
     $course=$_POST['course'];
 
 	   $query="insert into student_info(`name`,`email`,`password`,`mobileno`,`course`)
-       values('$name','$email','$password','$mobile','$course')";
+       values('$name','$email','$pass','$mobile','$course')";
      
         $result= mysqli_query($con,$query);
      
@@ -81,7 +81,7 @@ if(isset($_POST['submit']))
 
                 <div class="form-group">
                 <label>*Confirm Password:</label>
-                <input type="password" 	name="password" id="cpassword" class="form-control">
+                <input type="text" 	name="conpassword" id="cpassword" class="form-control">
                 <span id="cpassworderror" class="text-danger font-weight-bold"> </span>
                 </div>
                 

@@ -15,6 +15,7 @@ var usercheck= /^[A-Za-z. ]{3,30}$/;
 var emailcheck= /^[A-Za-z_0-9]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/; 
 
 var passwordcheck=  /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+
 var mobilecheck= /^[789][0-9]{9}$/;
 
 
@@ -70,6 +71,7 @@ if(password.match(cpassword)){
 	    document.getElementById('mobileerror').innerHTML="";
 	}else{
         document.getElementById('mobileerror').innerHTML=" ** mobile number  invalid";
+		
 		return false;
 	}
 	
