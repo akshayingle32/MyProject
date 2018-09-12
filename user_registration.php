@@ -126,11 +126,15 @@
             </script>
     </head>
     <body>
-        <div class="alert alert-success">
+        <div>
             <?php
-              if(!empty($_SESSION['message']))
+            include('alertBox.php');
+              if(!empty($_SESSION['register_error']))
               {
-                echo $_SESSION['message']; 
+                $msg = $_SESSION['register_error']; 
+                echo "<script type='text/javascript'>";
+                echo "alert_box(".$msg.")";
+                echo "</script>";
               }
               else
               {

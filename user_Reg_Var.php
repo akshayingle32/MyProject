@@ -57,7 +57,8 @@ $dbname = "user";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
-if ($conn->connect_error) {
+if ($conn->connect_error) 
+{
     die("Connection failed: " . $conn->connect_error);
 }
 
@@ -68,26 +69,32 @@ if ($conn->connect_error) {
 if($Password==$ConfPassword)
 {
 	
-$sql = "insert into userregistration (RegName, RegMob, RegCourse, RegEmail, RegPswd, RegConfPaswd) values('$name','$Mob','$Course','$Email','$Password','$ConfPassword')";
+	$sql = "insert into userregistration (RegName, RegMob, RegCourse, RegEmail, RegPswd, RegConfPaswd) values('$name','$Mob','$Course','$Email','$Password','$ConfPassword')";
 
 
-if ($conn->query($sql) === TRUE) {
-	echo "<br><br>";
-	echo "New record created successfully";
-	$_SESSION['message'] = "Registration succesful!";
-	sleep(2);
-	header('location:user_login.php');
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+if ($conn->query($sql) === TRUE) 
+	{
+		echo "<br><br>";
+		echo "New record created successfully";
+		$_SESSION['message'] = "Registration succesful!";
+		sleep(2);
+		header('location:user_login.php');
+	}
+ else 
+ {
+    $_SESSION['register_error']= $conn->error;
+    header("location:user_registration.php");
+  }
 }
 
 $conn->close();
 
-}
-else
-{
-	$_SESSION['message'] = "password does not match";
-}
+
+// else
+// {
+// 	$_SESSION['register_error'] = "password does not match";
+// 	header("location:user_registration.php");
+// }
 
 
 ?>

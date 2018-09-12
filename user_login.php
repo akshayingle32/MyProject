@@ -28,33 +28,31 @@ session_start();
  
     </head>
     
-    
     <body>
-        
-    
-    
-    
     <br>
         <div class="container">
  
 
-        <div class="alert alert-success">
+        
             <?php
               if(!empty($_SESSION['message']))
               {
-                echo $_SESSION['message']; 
+                $msg= $_SESSION['message'];
+                message($msg); 
               }
               else
               {
-                echo "Welcome to Login Page";
+                
+                session_destroy();
+
               }     
             ?>
              
-         </div>
+        
 
         <div class="b">
-      <a href="user_registration.php">   <input type="button"
-class="btn btn-primary" value="Sign up">  </a></div>
+      <a href="user_registration.php">
+        <input type="button" class="btn btn-primary" value="Sign up">  </a></div>
 
     
  <div class="container">
@@ -64,12 +62,12 @@ class="btn btn-primary" value="Sign up">  </a></div>
         <div class="form-group">
        
         <label>Email: </label>
-        <input type="email" name="email" class="form-control" >
+        <input type="email" name="email" class="form-control" required >
 
          </div>
          <div class="form-group">
         <label>Password: </label>
-        <input type="password" name="pass" class="form-control">
+        <input type="password" name="pass" class="form-control" required>
 
         </div>
         <input type="submit"  class="btn btn-primary" value="Login">   <br><br>
