@@ -52,7 +52,7 @@ session_start();
          </div>
  
         <div class="b">
-      <a href="register.php">   <input type="button"
+      <a href="user_registration.php">   <input type="button"
 class="btn btn-primary" value="Sign up">  </a></div>
 
     
