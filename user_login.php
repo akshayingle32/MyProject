@@ -1,6 +1,8 @@
 <?php
 
+
 session_start();
+
 ?>
 
 
@@ -51,14 +53,16 @@ session_start();
         
 
         <div class="b">
+
       <a href="user_registration.php">
         <input type="button" class="btn btn-primary" value="Sign up">  </a></div>
 
+
+     <div class="container">
     
- <div class="container">
-    <h1 align="center" > Welcome to User Login  </h1><br><br>
+     <h1 align="center" > Welcome to User Login  </h1><br><br>
             
-    <form action="loginVarify.php" method="POST">
+    <form action="user_profile.php" method="POST">
         <div class="form-group">
        
         <label>Email: </label>
@@ -71,8 +75,10 @@ session_start();
 
         </div>
         <input type="submit"  class="btn btn-primary" value="Login">   <br><br>
+          
           </form>
         </div>
     </div>
+
     </body>
 </html>
