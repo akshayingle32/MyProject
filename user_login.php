@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD
-//var_dump($_SESSION);
-=======
-// var_dump($_SESSION);
->>>>>>> e208dad1480ccbd1b4c17020e21f479b75087605
+
 session_start();
 ?>
 
@@ -41,10 +37,7 @@ session_start();
     <br>
         <div class="container">
  
-<<<<<<< HEAD
-        <!--<div class="alert alert-success"><?php echo $_SESSION['message']; ?></div>-->
-       
-=======
+
         <div class="alert alert-success">
             <?php
               if(!empty($_SESSION['message']))
@@ -58,8 +51,7 @@ session_start();
             ?>
              
          </div>
- 
->>>>>>> e208dad1480ccbd1b4c17020e21f479b75087605
+
         <div class="b">
       <a href="user_registration.php">   <input type="button"
 class="btn btn-primary" value="Sign up">  </a></div>

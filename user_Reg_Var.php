@@ -1,16 +1,7 @@
 
 <?php
 
-//var_dump($_POST);
-
-
 session_start();
-// var_dump($_POST);
-// var_dump($_SERVER);
-if(isset($_GET['RegName'])) { $Name= $_GET['RegName'];}
-elseif(isset($_POST['RegName'])){  $Name= $_POST['RegName'];}
-else{ $Name="";}
-
 
 if(isset($_GET['RegMail'])) { $Email= $_GET['RegMail'];}
 elseif(isset($_POST['RegMail'])){  $Email= $_POST['RegMail'];}
@@ -32,12 +23,11 @@ if(isset($_GET['RegConfPass'])) { $ConfPassword= $_GET['RegConfPass'];}
 elseif(isset($_POST['RegConfPass'])){  $ConfPassword= $_POST['RegConfPass'];}
 else{ $ConfPassword="";}
 
-// $Name=$_POST['RegName'];
+ $name=$_POST['RegName'];
 // $Email=$_POST['RegMail'];
 // $Mob=$_POST['RegNum'];
 // $Password=$_POST['RegPass'];
 // $ConfPassword=$_POST['RegConfPass'];
-echo $Name,$Email,$Password,$Mob;
 
 // $Course=$_POST['RegCouse'];
 
@@ -45,39 +35,17 @@ echo $Name,$Email,$Password,$Mob;
 
 // echo "step1";
 
-if($Name=="" || $Email=="" || $Mob=="" || $Password=="" || $ConfPassword=="" || $Course=="")
+if($Name="" && $Email="" && $Mob="" && $Password="" && $ConfPassword="" && $Course="")
 {
 
-	echo "<br> <br> Please enter valid field<br><br><br> $Name, $Email,$Mob,$Password, $ConfPassword,$Course";
-	die("failed");
-	
-	// sleep(2);
+
+	echo "<br> <br> Please enter valid field<br><br><br>";
+	die("something is wrong:".mysql_error()); 
+
 	header("location:user_registration.php");
 
 }
 
-if($Name=="" && $Email=="" && $Mob=="" && $Password=="" && $ConfPassword=="" && $Course=="")
-{
-
-	echo "Please enter valid field";
-	sleep(2);
-	// header("location:user_registration.php");
-	
-}
-// else
-// {
-
-//  $query=mysqli_query("insert into userregistration values('NULL','$Name','$Mob','$Course','$Email','$Password','$ConfPassword')");
-//  		if( $query )
-// 		{
-// 			header('location:user_login.php');
-// 		}
-//  		else
-// 		{
-//  			die("something is wrong:".mysql_error()); 
-//  		}
-	
-// }
 
 
 
@@ -97,13 +65,11 @@ if ($conn->connect_error) {
 
 // $sql = "INSERT INTO MyGuests (firstname, lastname, email) VALUES ('John', 'Doe', 'john@example.com')";
 
-$sql = "insert into userregistration (RegName, RegMob, RegCourse, RegEmail, RegPswd, RegConfPaswd) 
-								values('$Name','$Mob','$Course','$Email','$Password','$ConfPassword')";
-
- //var_dump($sql);
-//  die("failed");
-//  exit();
- 
+if($Password==$ConfPassword)
+{
+	
+$sql = "insert into userregistration (RegName, RegMob, RegCourse, RegEmail, RegPswd, RegConfPaswd) values('$name','$Mob','$Course','$Email','$Password','$ConfPassword')";
+   
 
 if ($conn->query($sql) === TRUE) {
 	echo "<br><br>";
@@ -112,9 +78,20 @@ if ($conn->query($sql) === TRUE) {
 	sleep(2);
 	header('location:user_login.php');
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+	$_SESSION['message'] = $conn->error;
+	header("location:user_registration.php");
+
 }
 
 $conn->close();
+
+}
+else
+{
+	$_SESSION['message'] = "password does not match";
+	header("location:user_registration.php");
+
+}
+
 
 ?>
