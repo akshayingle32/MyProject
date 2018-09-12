@@ -16,6 +16,7 @@ if(isset($_POST['submit']))
 	$pass=$_POST['password'];
 	$mobile=$_POST['mobile'];
     $course=$_POST['course'];
+    //echo $name,$email,$password,$mobile,$course."<br>";
 
 	   $query="insert into student_info(`name`,`email`,`password`,`mobileno`,`course`)
        values('$name','$email','$pass','$mobile','$course')";
@@ -59,7 +60,7 @@ if(isset($_POST['submit']))
         <div class="container" style="width:40%; background-color:#d0d3d8;  border-radius: 20px; margin-top:40px;"><br>
             <h2 class="text-center" style="color:#ffffff; background-color:#d31d4e; border-radius: 15px;">Student Registration</h2><br>
            
-            <form action="student_login.php"  method="post" onsubmit="return regular_validation()">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>"  method="post" onsubmit="return regular_validation()">
 
                 <div class="form-group">
                 <label>*Name:</label>
