@@ -1,4 +1,14 @@
-<!DOCTYPE html>
+<?php
+session_start();
+include("alert_box.php");
+if(!empty($_SESSION['message']))
+{
+    $msg=$_SESSION['message'];
+   echo "<script type='text/javascript'>
+    alert_box('".$msg."');
+     </script>";    }
+
+?><!DOCTYPE html>
 <html lang="en">
     <head>
     

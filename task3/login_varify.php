@@ -79,7 +79,8 @@ $table_name= "student_info";
     $result =mysqli_query($con,$sql);
     if (!$result)
       {
-        die("no data selected:".mysql_error());
+        //die("no data selected:".mysql_error());
+        $_SESSION['message']="Invalide filed";
       }
     else
       {
@@ -110,10 +111,10 @@ $table_name= "student_info";
             else
             {
                 /* when user login is failed, page redirect to login */
-              //$_SESSION['message'] = "please enter valid fields";
-                //header('location:user_login.php');
+              $_SESSION['message'] = "please enter valid fields";
+                header('location:student_login.php');
 
-                echo "login failed";
+                //echo "login failed";
             }
 
 }
