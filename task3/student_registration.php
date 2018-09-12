@@ -1,3 +1,39 @@
+<?php
+
+$servername = "192.168.31.40";
+$username = "dms";
+$password = "dms";
+$dbname = "user";
+
+$con =mysqli_connect($servername, $username, $password,$dbname);
+
+
+if(isset($_POST['submit']))
+ {  
+
+    $name=$_POST['name'];
+    $email=$_POST['email'];
+	$password=$_POST['password'];
+	$mobile=$_POST['mobile'];
+    $course=$_POST['course'];
+
+	   $query="insert into student_info(`name`,`email`,`password`,`mobileno`,`course`)
+       values('$name','$email','$password','$mobile','$course')";
+     
+        $result= mysqli_query($con,$query);
+     
+
+    if($result){
+        
+         echo"<script> user register successfully </script>";
+        }
+        
+    else{
+      echo "something is wrong";
+    }
+  }
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +43,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="js/user_validation.js"></script>
+        <!-- onsubmit="return regular_validation()" <script src="validation.js"></script> -->
     
     </head> <br>
        
@@ -20,23 +56,24 @@
     
         <div class="container" style="width:40%; background-color:#d0d3d8;  border-radius: 20px; margin-top:50px;"><br>
             <h2 class="text-center" style="color:#6b96db; background-color:#dfff60; border-radius: 15px;">Student Registration</h2><br>
-            <form action="index.php" onsubmit="return regular_validation()" method="post">
+           
+            <form action="student_registration.php"  method="post">
 
                 <div class="form-group">
                 <label>*Name:</label>
-                <input type="text" name="user" id="username" class="form-control">
+                <input type="text" name="name" id="username" class="form-control">
                 <span id="usererror" class="text-danger font-weight-bold"></span>
                 </div>
                 
                 <div class="form-group">
                 <label>*Email:</label>
-                <input type="email" 	name="email" id="email" class="form-control">
+                <input type="email" name="email" id="email" class="form-control">
                 <span id="emailerror" class="text-danger font-weight-bold"> </span>
                 </div>
                 
                 <div class="form-group">
                 <label>*Password:</label>
-                <input type="password" 	name="pass" id="password" class="form-control">
+                <input type="password" 	name="password" id="password" class="form-control">
                 <span id="passworderror" class="text-danger font-weight-bold"> </span>
                 </div>
                 
@@ -48,7 +85,7 @@
 
                 <div class="form-group">
                     <label >*Course:</label>
-                        <select id="ddlView" name="couse">    
+                        <select id="ddlView" name="course">    
                             <option value="Enginnering" selected>Enginnering</option>
                             <option value="BCA">BCA</option>
                             <option value="BSC">BSC</option>
@@ -57,7 +94,7 @@
                 
                 <input type="submit" name="submit" class="btn btn-primary" value="Register">
                 
-                    <h5>Already have an Account? <a href="login.php"> Sign in </a> </h5><br>
+                <h5>Already have an Account? <a href="login.php"> Sign in </a> </h5><br>
                 
 
 
