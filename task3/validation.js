@@ -1,3 +1,5 @@
+document.getElementById('emailerror').innerHTML=" ** Email is invalid";
+document.getElementById('emailerror').innerHTML=" ** Email is invalid";
 
 				
  function regular_validation(){
