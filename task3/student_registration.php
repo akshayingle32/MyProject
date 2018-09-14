@@ -5,8 +5,8 @@ $username = "dms";
 $password = "dms";
 $dbname = "user";
 
-$con =mysqli_connect($servername, $username, $password,$dbname);
-include("alert_box.php");
+$con =mysqli_connect($servername,$username,$password,$dbname);
+//include("alert_box.php");
 
 if(isset($_POST['submit']))
  {  
@@ -16,15 +16,17 @@ if(isset($_POST['submit']))
 	$pass=$_POST['password'];
 	$mobile=$_POST['mobile'];
     $course=$_POST['course'];
-    //echo $name,$email,$password,$mobile,$course."<br>";
+  //  echo $name,$email,$password,$mobile,$course."<br>";
 
 	   $query="insert into student_info(`name`,`email`,`password`,`mobileno`,`course`)
        values('$name','$email','$pass','$mobile','$course')";
      
         $result= mysqli_query($con,$query);
+
+        
      
 
-    if($result){
+   if($result){
         
            $msg="user register successfully ";
       echo "<script type='text/javascript'>
@@ -33,12 +35,12 @@ if(isset($_POST['submit']))
         }
         
     else{
-    $msg="something is wrong ";
+    $msg="something is wrong email or password already registered! ";
    echo "<script type='text/javascript'>
     alert_box('".$msg."');
      </script>"; 
-    }
-  }
+   }
+}
 
 ?>
 
@@ -67,7 +69,7 @@ document.write(cpassword);
         <div class="container" style="width:40%; background-color:#d0d3d8;  border-radius: 20px; margin-top:40px;"><br>
             <h2 class="text-center" style="color:#ffffff; background-color:#d31d4e; border-radius: 15px;">Student Registration</h2><br>
            
-            <form action="student_login.php"  method="post" onsubmit="return regular_validation()">
+            <form action="student_registration.php"  method="post" onsubmit="return regular_validation()">
 
                 <div class="form-group">
                 <label>*Name:</label>
