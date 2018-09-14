@@ -105,9 +105,6 @@ if(isset($_POST['submit']))
                 
                     <h5>Already have an Account? <a href="student_login.php"> Sign in </a> </h5><br>
                 
-
-
-
             </form>  
         </div>
     </body>
