@@ -1,5 +1,7 @@
-	
- function regular_validation(){
+
+//server side validation
+
+function regular_validation(){
 	
 	var username=document.getElementById('username').value;
 	var email=document.getElementById('email').value;
@@ -34,7 +36,7 @@ var mobilecheck= /^[789][0-9]{9}$/;
 //conform password section
 	
 	
-if(password.match(cpassword)){
+if(password==cpassword){
 	    
 	    document.getElementById('cpassworderror').innerHTML="";
 	}else{

@@ -5,8 +5,8 @@ $username = "dms";
 $password = "dms";
 $dbname = "user";
 
-$con =mysqli_connect($servername, $username, $password,$dbname);
-
+$con =mysqli_connect($servername,$username,$password,$dbname);
+include("alert_box.php");
 
 if(isset($_POST['submit']))
  
@@ -26,11 +26,17 @@ if(isset($_POST['submit']))
 
     if($result){
         
-         echo"<script> user register successfully </script>";
+           $msg="user register successfully ";
+      echo "<script type='text/javascript'>
+    alert_box('".$msg."');
+     </script>"; 
         }
         
     else{
-      echo "something is wrong";
+    $msg="something is wrong ";
+   echo "<script type='text/javascript'>
+    alert_box('".$msg."');
+     </script>"; 
     }
   }
 
@@ -46,21 +52,23 @@ if(isset($_POST['submit']))
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <!-- <script src="validation.js"></script> -->
 
-        <script src="validation.js"></script>
+        <script src="validation.js">
+     var password=document.getElementById('password').value;
+     var cpassword=document.getElementById('cpassword').value;
+     document.write(password);
+     document.write(cpassword);
+
+</script>
     
-    </head> <br>
-       
-            
-    <div>        
-    
-    </div>
+    </head>  
+
 	 
     <body style="background-color:#d9fcd9;">
     
         <div class="container" style="width:40%; background-color:#d0d3d8;  border-radius: 20px; margin-top:40px;"><br>
             <h2 class="text-center" style="color:#ffffff; background-color:#d31d4e; border-radius: 15px;">Student Registration</h2><br>
            
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>"  method="post" onsubmit="return regular_validation()">
+            <form action="student_registration.php"  method="post" onsubmit="return regular_validation()">
 
                 <div class="form-group">
                 <label>*Name:</label>
@@ -92,14 +100,14 @@ if(isset($_POST['submit']))
                 <span id="mobileerror" class="text-danger font-weight-bold"> </span>
                 </div>
 
-                <div class="form-group">
+                    <div class="form-group">
                     <label >*Course:</label>
                         <select id="ddlView" name="course">    
                             <option value="Enginnering" selected>Enginnering</option>
                             <option value="BCA">BCA</option>
                             <option value="BSC">BSC</option>
                         </select>  
-                </div>    <br>
+                  </div>    <br>
                 
                    <input type="submit" name="submit" class="btn btn-primary" value="Register">
                 
