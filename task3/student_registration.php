@@ -16,15 +16,17 @@ if(isset($_POST['submit']))
 	$pass=$_POST['password'];
 	$mobile=$_POST['mobile'];
     $course=$_POST['course'];
-    //echo $name,$email,$password,$mobile,$course."<br>";
+  //  echo $name,$email,$password,$mobile,$course."<br>";
 
 	   $query="insert into student_info(`name`,`email`,`password`,`mobileno`,`course`)
        values('$name','$email','$pass','$mobile','$course')";
      
         $result= mysqli_query($con,$query);
+
+        
      
 
-    if($result){
+   if($result){
         
            $msg="user register successfully ";
       echo "<script type='text/javascript'>
@@ -33,12 +35,12 @@ if(isset($_POST['submit']))
         }
         
     else{
-    $msg="something is wrong ";
+    $msg="something is wrong email or password already registered! ";
    echo "<script type='text/javascript'>
     alert_box('".$msg."');
      </script>"; 
-    }
-  }
+   }
+}
 
 ?>
 
@@ -112,7 +114,6 @@ if(isset($_POST['submit']))
                    <input type="submit" name="submit" class="btn btn-primary" value="Register">
                 
                     <h5>Already have an Account? <a href="student_login.php"> Sign in </a> </h5><br>
-                
             </form>  
         </div>
     </body>
