@@ -6,11 +6,11 @@ $password = "dms";
 $dbname = "user";
 
 $con =mysqli_connect($servername,$username,$password,$dbname);
-//include("alert_box.php");
+include("alert_box.php");
 
 if(isset($_POST['submit']))
- {  
-
+ 
+{  
     $name=$_POST['name'];
     $email=$_POST['email'];
 	$pass=$_POST['password'];
@@ -54,10 +54,11 @@ if(isset($_POST['submit']))
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <!-- <script src="validation.js"></script> -->
 
-        <script src="validation.js">var password=document.getElementById('password').value;
-    var cpassword=document.getElementById('cpassword').value;
-document.write(password);
-document.write(cpassword);
+        <script src="validation.js">
+     var password=document.getElementById('password').value;
+     var cpassword=document.getElementById('cpassword').value;
+     document.write(password);
+     document.write(cpassword);
 
 </script>
     

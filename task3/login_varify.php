@@ -73,9 +73,10 @@ $table_name= "student_info";
 
 
    // echo $email."<br>".$password."<br>";
-    $sql = "SELECT * FROM ".$table_name." WHERE email='".$email."'";
+     $sql = "SELECT * FROM ".$table_name." WHERE email='".$email."'";
      $sql_p = "SELECT * FROM ".$table_name." WHERE  password='".$pass."'";
-    $r1 =mysqli_query($con,$sql);
+   
+     $r1 =mysqli_query($con,$sql);
     $r2= mysqli_query($con,$sql_p);
     
     $rows1=mysqli_fetch_array($r1,MYSQLI_NUM);
