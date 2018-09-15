@@ -64,60 +64,63 @@ document.write(cpassword);
     </head>  
 
 	 
-    <body style="background-color:#d9fcd9;">
-    
-        <div class="container" style="width:40%; background-color:#d0d3d8;  border-radius: 20px; margin-top:40px;"><br>
-            <h2 class="text-center" style="color:#ffffff; background-color:#d31d4e; border-radius: 15px;">Student Registration</h2><br>
-           
-            <form action="student_registration.php"  method="post" onsubmit="return regular_validation()">
+    <body style="background-color:#3e4144;">
+    <div class="container" style="width:40%; background-color:white;  border-radius: 0px; margin-top:40px ">
+            <div class="container" style="width:100%; background-color:#d0d3d8;   margin-top:20px; margin-top:20px; margin-bottom:20px;"><br>
+                <h2 class="text-center" style="color:#ffffff; background-color:#310849; border-radius: 15px;">Student Registration</h2><br>
+            
+                <form action="student_registration.php"  method="post" onsubmit="return regular_validation()">
 
-                <div class="form-group">
-                <label>*Name:</label>
-                <input type="text" name="name" id="username" class="form-control">
-                <span id="usererror" class="text-danger font-weight-bold"></span>
-                </div>
-                
-                <div class="form-group">
-                <label>*Email:</label>
-                <input type="email" name="email" id="email" class="form-control">
-                <span id="emailerror" class="text-danger font-weight-bold"> </span>
-                </div>
-                
-                <div class="form-group">
-                <label>*Password:</label>
-                <input type="password" 	name="password" id="password" class="form-control">
-                <span id="passworderror" class="text-danger font-weight-bold"> </span>
-                </div>
+                    <div class="form-group">
+                    <label>*Name:</label>
+                    <input type="text" name="name" id="username" class="form-control" placeholder="Enter Name">
+                    <span id="usererror" class="text-danger font-weight-bold"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                    <label>*Email:</label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email ID">
+                    <span id="emailerror" class="text-danger font-weight-bold"> </span>
+                    </div>
 
-                <div class="form-group">
-                <label>*Confirm Password:</label>
-                <input type="password" 	name="cpassword" id="cpassword" class="form-control">
-                <span id="cpassworderror" class="text-danger font-weight-bold"> </span>
-                </div>
-                
-                <div class="form-group">
-                <label>*mobile No:</label>
-                <input type="text" 	name="mobile" id="mobilenumber" class="form-control">
-                <span id="mobileerror" class="text-danger font-weight-bold"> </span>
-                </div>
+                    <div class="form-group">
+                    <label>*mobile No:</label>
+                    <input type="text" 	name="mobile" id="mobilenumber" class="form-control" placeholder="Enter Mobile no">
+                    <span id="mobileerror" class="text-danger font-weight-bold"> </span>
+                    </div>
+                    
+                    <div class="form-group">
+                    <label>*Password:</label>
+                    <input type="password" 	name="password" id="password" class="form-control" placeholder="Enter Password">
+                    <span id="passworderror" class="text-danger font-weight-bold"> </span>
+                    </div>
 
-                <div class="form-group">
-                    <label >*Course:</label>
-                        <select id="ddlView" name="course">    
-                            <option value="Enginnering" selected>Enginnering</option>
-                            <option value="BCA">BCA</option>
-                            <option value="BSC">BSC</option>
-                        </select>  
-                </div>    <br>
-                
-                <input type="submit" name="submit" class="btn btn-primary" value="Register">
-                
-                    <h5>Already have an Account? <a href="student_login.php"> Sign in </a> </h5><br>
-                
+                    <div class="form-group">
+                        <label >*Course:</label>
+                            <select id="ddlView" name="course">    
+                                <option value="Digital Marketing" selected>Digital Marketing</option>
+                                <option value="Python">Python</option>
+                                <option value="PHP">PHP</option>
+                            </select>  
+                    </div>  
+                    
+                    <div class="form-group">
+                    <label for="comment">Messege:</label>
+                    <textarea class="form-control" rows="3" id="comment" name="messege" placeholder="Enter your Messege"></textarea>
+                    </div> 
+                    
+                    
+                      <br>
+                    
+                    <input type="submit" name="submit" class="btn btn-primary" value="Register">
+                    
+                        <h5>Already have an Account? <a href="student_login.php"> Sign in </a> </h5><br>
+                    
 
 
 
-            </form>  
-        </div>
+                </form>  
+            </div>
+        </div>   
     </body>
 </html>
