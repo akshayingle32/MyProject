@@ -32,41 +32,45 @@ if(!empty($_SESSION['message']))
     
     </div>
 	 
-    <body style="background-color:#d9fcd9;">
-    
-        <div class="container" style="width:40%; background-color:#d0d3d8;  border-radius: 20px; margin-top:50px;"><br>
-            <h2 class="text-center" style="color:#ffffff; background-color:#d31d4e; border-radius: 15px;">Student Login</h2><br>
-            <form action="login_varify.php"  method="POST">
+    <body style="background-color:#3e4144;">
+        <div class="container" style="width:40%; background-color:white;  margin-top:50px; ">
+            <div class="container" style="width:100%; background-color:#d0d3d8;   margin-top:20px; margin-top:20px; margin-bottom:20px;"><br>
+                <h2 class="text-center" style="color:#ffffff; background-color: #b70e3b; border-radius: 15px;">Student Login</h2><br>
+            
+                <form action="login_varify.php"  method="POST">
 
+                    
+                                
+                    <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+                    </div>  <br>
+
+                    <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                    </div>  <br>
                 
-                <div class="form-group">
-                <label>*Email:</label>
-                <input type="email" 	name="email" id="email" class="form-control" style="border-radius:10px;">
-                <span id="emailerror" class="text-danger font-weight-bold"> </span>
-                </div>
+                    
                 
-                <div class="form-group">
-                <label>*Password:</label>
-                <input type="password" 	name="password" id="password" class="form-control" style="border-radius:10px;">
-                <span id="passworderror" class="text-danger font-weight-bold"> </span>
-                </div><br>
-                
-                
-                <div class="col-md-3">
-                <input type="submit" name="submit" class="btn btn-primary" value="Sign in"><br>
-                </div>
-                <div class="col-md-9" style="margin-top:15px;">
-                <a href="#"> Forget Password </a>
-                </div>
+                    
+                    
+                    <div class="col-md-3">
+                    <input type="submit" name="submit" class="btn btn-primary" value="Sign in"><br>
+                    </div>
+                    <div class="col-md-9" style="margin-top:15px;">
+                    <a href="#"> Forget Password </a>
+                    </div>
 
-                 <div class="col-md-12"><br>
-                    <h5>Not registered yet! <a href="student_registration.php"> Create New Account </a> </h5><br>
-                </div>
+                    <div class="col-md-12"><br>
+                        <h5>Not registered yet! <a href="student_registration.php"> Create New Account </a> </h5><br>
+                    </div>
 
 
 
-            </form>  
-        </div>
+                </form>  
+            </div>
+        </div>   
     </body>
 </html>
 

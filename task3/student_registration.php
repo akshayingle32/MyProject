@@ -52,7 +52,7 @@ if(isset($_POST['submit']))
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <!-- <script src="validation.js"></script> -->
+        <script src="validation.js"></script>
 
         <script src="validation.js">
      var password=document.getElementById('password').value;
@@ -66,35 +66,34 @@ if(isset($_POST['submit']))
 
 	 
     <body style="background-color:#3e4144;">
-    <div class="container" style="width:40%; background-color:white;  border-radius: 0px; margin-top:40px ">
-            <div class="container" style="width:100%; background-color:#d0d3d8;   margin-top:20px; margin-top:20px; margin-bottom:20px;"><br>
-                <h2 class="text-center" style="color:#ffffff; background-color:#310849; border-radius: 15px;">Student Registration</h2><br>
+    <div class="container" style="width:40%; background-color:white;  margin-top:50px; ">
+            <div class="container" style="width:100%; background-color:#d0d3d8;   margin-top:20px; margin-top:20px; margin-bottom:20px; "><br>
+                <h2 class="text-center" style="color:#ffffff; background-color:#b70e3b; border-radius: 15px;">Student Registration</h2><br>
             
                 <form action="student_registration.php"  method="post" onsubmit="return regular_validation()">
 
-                    <div class="form-group">
-                    <label>*Name:</label>
-                    <input type="text" name="name" id="username" class="form-control" placeholder="Enter Name">
-                    <span id="usererror" class="text-danger font-weight-bold"></span>
-                    </div>
-                    
-                    <div class="form-group">
-                    <label>*Email:</label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email ID">
-                    <span id="emailerror" class="text-danger font-weight-bold"> </span>
-                    </div>
+                    <div class="input-group">
+                    <span class="input-group-addon" id="usererror"><i class="glyphicon glyphicon-user"></i></span>
+                    <input type="text" type="text" class="form-control" name="name" id="username" placeholder="Enter Name">
+                    </div>  <br>
 
-                    <div class="form-group">
-                    <label>*mobile No:</label>
-                    <input type="text" 	name="mobile" id="mobilenumber" class="form-control" placeholder="Enter Mobile no">
-                    <span id="mobileerror" class="text-danger font-weight-bold"> </span>
-                    </div>
-                    
-                    <div class="form-group">
-                    <label>*Password:</label>
-                    <input type="password" 	name="password" id="password" class="form-control" placeholder="Enter Password">
-                    <span id="passworderror" class="text-danger font-weight-bold"> </span>
-                    </div>
+                    <div class="input-group">
+                    <span class="input-group-addon" id="emailerror"><i class="glyphicon glyphicon-envelope"></i></span>
+                    <input type="email" type="text" class="form-control" name="email" id="email" placeholder="Enter Email ID">
+                    </div>  <br>
+
+                    <div class="input-group">
+                    <span class="input-group-addon" id="mobileerror"><i class="glyphicon glyphicon-earphone"></i></span>
+                    <input type="text" type="text" class="form-control" name="mobile" id="mobilenumber" placeholder="Enter Mobile No">
+                    </div>  <br>
+
+                    <div class="input-group">
+                    <span class="input-group-addon" id="passworderror"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input type="password" type="text" class="form-control" name="password" id="password" placeholder="Enter Password">
+                    </div>  <br>
+
+
+
 
                     <div class="form-group">
                         <label >*Course:</label>
@@ -104,12 +103,13 @@ if(isset($_POST['submit']))
                                 <option value="PHP">PHP</option>
                             </select>  
                     </div>  
-                    
-                    <div class="form-group">
-                    <label for="comment">Messege:</label>
-                    <textarea class="form-control" rows="3" id="comment" name="messege" placeholder="Enter your Messege"></textarea>
-                    </div> 
-                    
+
+                    <div class="input-group">
+                    <span class="input-group-addon" id="passworderror"><i class="glyphicon glyphicon-comment"></i></span>
+                    <textarea class="form-control" rows="2.5" id="comment" name="messege" placeholder="Enter your Messege"></textarea>
+                    </div>  
+
+
                     
                       <br>
                     
