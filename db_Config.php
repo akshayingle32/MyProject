@@ -4,7 +4,9 @@
 <?php
 
 // echo "php";
-$con=mysqli_connect("192.168.31.40","dms","dms","user");
+//$con=mysqli_connect("192.168.31.40","dms","dms","user");
+$con=mysqli_connect("localhost","root","hitler","user");
+
  //mysqli_select_db("user");
 // echo "data";
 
