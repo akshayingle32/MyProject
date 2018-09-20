@@ -24,6 +24,7 @@ include("db_Config.php");
         if(!empty( $_SESSION['user']))
          {
            $user=$_SESSION['user'];
+           
            $table_name="student_info";
 
            $sql1="select id from ".$table_name." where id ='".$user."'";

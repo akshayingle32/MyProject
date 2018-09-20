@@ -1,5 +1,7 @@
-	
- function regular_validation(){
+
+//server side validation
+
+function regular_validation(){
 	
 	var username=document.getElementById('username').value;
 	var email=document.getElementById('email').value;
@@ -71,6 +73,7 @@ if(password==cpassword){
 	    document.getElementById('mobileerror').innerHTML="";
 	}else{
         document.getElementById('mobileerror').innerHTML=" ** mobile number  invalid";
+		
 		return false;
 	}
 	
